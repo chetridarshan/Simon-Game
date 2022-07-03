@@ -63,15 +63,12 @@ function nextSequence() {
   level++;
   $("#level-title").text("Level " + level);
 
-  setTimeout(function () {
     var randomNumber = Math.floor(Math.random() * 4);
     var randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
 
     $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColour);
-
-  }, 200);
 
 }
 
